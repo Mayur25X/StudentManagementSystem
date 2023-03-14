@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style1.css">
+
+	</head>
+	<body>
+	<section class="ftco-section img bg-hero" style="background-image: url(images/bg_1.jpg);">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Update Student</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-11">
+							<div>
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">Enter Student ID To Update</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form action="/update" id="contactForm" name="contactForm">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<input id="alpha" type="text" pattern="[a-zA-Z0-9]+" required class="form-control" name="Student_id" id="Student_id" placeholder="Student ID">
+												</div>
+											</div>
+											
+											<div class="col-md-12 ">
+												<div class="form-group">
+													<input type="submit" value="Search" class="btn btn-primary">
+													<button  class="btn btn-primary" onclick="window.location.href='./';" >
+														Home
+													  </button>													
+													  <div class="Result"></div>
+													
+													
+												</div>
+											</div>
+							
+											
+										</div>
+										</div>
+									</form>
+
+
+									{{#if prest}}
+									<div class="contact-wrap w-100 p-md-5 p-4">
+										<h3 class="mb-4">Student Information is Updated Successfully</h3>
+									
+								</div>
+								{{/if}}
+
+									{{#if found}}
+									<div class="contact-wrap w-100 p-md-5 p-4">
+										<div id="form-message-warning" class="mb-4"></div> 
+										<form action="/updateStudent" id="contactForm" name="contactForm">
+											{{#data}}
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<input id="alpha" type="text" pattern="[a-zA-Z0-9]+" required="" class="form-control" name="Student_id" value="{{student_id}}" placeholder="Student ID" required readonly>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="text" class="form-control" name="name" id="name" value="{{name}}" placeholder="Name">
+													</div>
+												</div>
+												<div class="col-md-12"> 
+													<div class="form-group">
+														<input type="email" class="form-control" name="email" id="email" value="{{email}}" placeholder="Email">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<select name="Branch" placeholder="Branch" class="form-control" style="color: #0f6045;">
+															<option value="{{Branch}}">{{Branch}}</option>
+															<option value="CSE">CSE</option>
+															<option value="IT">IT</option>
+															<option value="Eletrical">Eletrical</option>
+															<option value="Mech">Mechanics</option>
+															<option value="Eletronic">Eletronic</option>
+														</select>
+	
+												</div>
+												<div> 
+													<div class="col-md-12 Gen-box">
+														<p class="figure-img .form-control">Gender :</p>
+															<input type="radio" id="gender" name="gender" value="male"> Male    
+															<br>  
+															<input type="radio" id="gender" name="gender" value="female"> Female 
+															<br>
+															<input type="radio" id="gender" name="gender" value="other"> Other 
+															<br>
+														<br>														
+													</div>
+													
+												</div>
+	
+	
+	
+	
+												<div class="col-md-12 ">
+													<div class="form-group">
+														<input type="submit" value="Submit" class="btn btn-primary">
+														<button class="btn btn-primary" onclick="window.location.href='./';">
+															Home
+														  </button>													
+														  <div class="submitting"></div>
+														
+														
+													</div>
+												</div>
+												
+											</div>
+										
+	
+									</div>
+									{{/data}}
+								</form>
+								{{/if}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+	</body>
+</html>
+

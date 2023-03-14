@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style1.css">
+
+	</head>
+	<body>
+	<section class="ftco-section img bg-hero" style="background-image: url(images/bg_1.jpg);">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Delete Student</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-11">
+							<div >
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">Enter Student ID To Delete</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+									<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form action="/deleteStudent" id="contactForm" name="contactForm">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<input id="alpha" type="text" pattern="[a-zA-Z0-9]+" required class="form-control" name="Student_id" id="Student_id" placeholder="Student ID">
+												</div>
+											</div>
+											
+											<div class="col-md-12 ">
+												<div class="form-group">
+													<input type="submit" value="Search" class="btn btn-primary">
+													<button  class="btn btn-primary" onclick="window.location.href='./';" >
+														Home
+													  </button>													
+													  <div class="Result"></div>
+													
+													
+												</div>
+											</div>
+											
+										</div>
+									</form>
+									{{#if check}}
+									<h5 class="mb-4"> Invalid Student Information</h5>
+									{{/if}}
+									{{#if found}}
+									<h3 class="mb-4">  Student Information Successfully</h3>
+									
+										
+										{{/if}}
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+		</div>
+
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+	</body>
+</html>
+

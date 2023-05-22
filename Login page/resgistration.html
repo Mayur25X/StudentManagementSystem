@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Walchand - Login Page</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/EUKXZaEBcVfm.css">
+    <link rel="stylesheet" type="text/css" href="css/LZJL2Tq6fUH8.css">
+    <link rel="stylesheet" type="text/css" href="css/gG7jrRylSJgd.css">
+    <link rel="stylesheet" type="text/css" href="css/BhF0gudLujYh.css">
+    <link rel="stylesheet" type="text/css" href="css/e9XK9Ln9pvI2.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style3.css"> -->
+    <link rel="shortcut icon" href="EYEvxk5P3ktM.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        /* ===== Google Font Import - Poppins ===== */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+        .formContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100;
+
+            flex-direction: column;
+        }
+
+        .container {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 6px;
+            padding: 30px;
+            margin: 0 15px;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .container header {
+            position: relative;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .container header::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 3px;
+            width: 27px;
+            border-radius: 8px;
+            background-color: #4070f4;
+        }
+
+        .container form {
+            position: relative;
+            margin-top: 16px;
+            min-height: 628px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .container form .form {
+            position: absolute;
+            background-color: #fff;
+            transition: 0.3s ease;
+        }
+
+        .container form .form.second {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(100%);
+        }
+
+        form.secActive .form.second {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(0);
+        }
+
+        form.secActive .form.first {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(-100%);
+        }
+
+        .container form .title {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 6px 0;
+            color: #333;
+        }
+
+        .container form .fields {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        form .fields .input-field {
+            display: flex;
+            width: calc(100% / 3 - 15px);
+            flex-direction: column;
+            margin: 4px 0;
+        }
+
+        .input-field label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #2e2e2e;
+        }
+
+        .input-field input,
+        select {
+            outline: none;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            padding: 0 15px;
+            height: 42px;
+            margin: 8px 0;
+        }
+
+        .input-field input :focus,
+        .input-field select:focus {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+        }
+
+        .input-field select,
+        .input-field input[type="date"] {
+            color: #707070;
+        }
+
+        .input-field input[type="date"]:valid {
+            color: #333;
+        }
+
+        .container form button,
+        .backBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            max-width: 200px;
+            width: 100%;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 5px;
+            margin: 25px 0;
+            background-color: #4070f4;
+            transition: all 0.3s linear;
+            cursor: pointer;
+        }
+
+        .container form .btnText {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        form button:hover {
+            background-color: #265df2;
+        }
+
+        form button i,
+        form .backBtn i {
+            margin: 0 6px;
+        }
+
+        form .backBtn i {
+            transform: rotate(180deg);
+        }
+
+        form .buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        form .buttons button,
+        .backBtn {
+            margin-right: 14px;
+        }
+
+        @media (max-width: 750px) {
+            .container form {
+                overflow-y: scroll;
+            }
+
+            .container form::-webkit-scrollbar {
+                display: none;
+            }
+
+            form .fields .input-field {
+                width: calc(100% / 2 - 15px);
+            }
+        }
+
+        @media (max-width: 550px) {
+            form .fields .input-field {
+                width: 100%;
+            }
+        }
+
+
+        .captcha-img .captacha {
+            text-align: center;
+
+            position: absolute;
+
+        }
+
+        .wapper .captcha-area {
+            display: flex;
+        }
+    </style>
+
+
+</head>
+
+<body class="login mdc-typography">
+    <script type="text/javascript" src="js/WSwypyuFfal1.js"></script>
+    <script type="text/javascript" src="js/DrKPCW4qEpvj.js"></script>
+    <script type="text/javascript" src="js/og4t3AZE7pvU.js"></script>
+    <script type="text/javascript" src="js/5IJaycN4Gd5p.js"></script>
+    <script type="text/javascript" src="js/264iSiCpBn9W.js"></script>
+    <script type="text/javascript" src="js/H5Bk8h2qZwnz.js"></script>
+
+    <header id="app-bar" class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-elevation--z4">
+        <nav class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="cas-brand m-3">
+                    <img class="cas-logo" alt="Harvard University logo with shield" title="Harvard University"
+                        src="/images/wce_logo.png"></span>
+                <span class="strong">Walchand College Of Engineering</span>
+            </section>
+            <section class="mdc-top-app-bar__section">
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                <div class="mdc-menu-surface--anchor">
+                    <button id="menuButton" class="mdc-icon-button mdc-top-app-bar__navigation-icon"
+                        aria-haspopup="true" aria-controls="navMenu" value="SIGN IN"> <span
+                            class="mdi mdi-account"></span> <span class="sr-only">menu</span> </button>
+                    <div id="navMenu" class="mdc-menu mdc-menu-surface">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                            <li> <a href="https://key.harvard.edu/manage-account/auto-choose" class="mdc-list-item"
+                                    role="menuitem" tabindex="-1"> <span class="mdc-list-item__ripple"></span> <i
+                                        class="mdi mdi-cog material-icons mdc-list-item__graphic"
+                                        aria-hidden="true"></i>
+                                    <span class="mdc-list-item__text">Account Settings</span> </a> </li>
+                            <li> <a href="/cas/logout" class="mdc-list-item" role="menuitem" tabindex="-1"> <span
+                                        class="mdc-list-item__ripple"></span> <i
+                                        class="mdi mdi-logout material-icons mdc-list-item__graphic"
+                                        aria-hidden="true"></i>
+                                    <span class="mdc-list-item__text">Logout</span> </a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </nav>
+
+    </header>
+
+    <div class="formContainer">
+
+
+        <div class="container">
+            <header>Registration</header>
+
+            <form action="#">
+                <div class="form first">
+                    <div class="details personal">
+
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" placeholder="Enter mobile number" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Gender</label>
+                                <select required>
+                                    <option disabled selected>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Branch</label>
+                                <select required>
+                                    <option disabled selected>Select Branch</option>
+                                    <option>Civil Engineering</option>
+                                    <option>Mechanical Engineering</option>
+                                    <option>Electrical Engineering</option>
+                                    <option>Electronics Engineering</option>
+                                    <option>Computer Science and Engineering</option>
+                                    <option>Information Technology</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details ID">
+
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Qualification</label>
+                                <select required>
+                                    <option disabled selected>Select Qualification</option>
+                                    <option>B.tech</option>
+                                    <option>M.tech</option>
+                                    <option>Ph.d</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Post</label>
+                                <select required>
+                                    <option disabled selected>Select Post</option>
+                                    <option>Assistant Professor</option>
+                                    <option>HOD</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Username</label>
+                                <input type="text" placeholder="Username" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Password</label>
+                                <input type="password" placeholder="password" required>
+                                <label>Confirm password</label>
+                                <input type="password" value="" placeholder="Confirm password" required>
+                            </div>
+                            <div class="wapper">
+
+
+                                <div class="captcha-area">
+                                    <div class="captcha-imp">
+                                        <img src="captcha-bg.png" alt="">
+                                        <span class="captacha"></span>>
+
+                                    </div>
+                                    <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
+                                </div>
+                                <form action="#" class="input-area">
+                                    <input type="text" placeholder="Enter captcha" maxlenght="6" required>
+                                    <button class="chech-btn">Check</button>
+                                </form>
+                                <div class="status-txt"></div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <i class="uil uil-navigator"></i>
+                                <span class="btnText">Back</span>
+                            </div>
+
+                            <button class="sumbit">
+                                <span class="btnText">Submit</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+
+            </form>
+        </div>
+    </div>
+    <footer class="py-4 d-flex justify-content-center cas-footer flex-column text-center">
+        <div>
+            <span>Copyright ©
+                <script>document.write(new Date().getFullYear());</script> Walchand College Of Engineering
+            </span>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

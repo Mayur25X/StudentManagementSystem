@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css" data-tag-name="trix-editor">
+        trix-editor:empty:not(:focus)::before {
+            content: attr(placeholder);
+            color: graytext;
+        }
+
+        trix-editor a[contenteditable=false] {
+            cursor: text;
+        }
+
+        trix-editor img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        trix-editor [data-trix-attachment] figcaption textarea {
+            resize: none;
+        }
+
+        trix-editor [data-trix-attachment] figcaption textarea.trix-autoresize-clone {
+            position: absolute;
+            left: -9999px;
+            max-height: 0px;
+        }
+
+        trix-editor [data-trix-selection] {
+            font-size: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            border: none !important;
+        }
+
+        trix-editor {
+            display: block;
+        }
+    </style>
+    <style type="text/css" data-tag-name="trix-toolbar">
+        trix-toolbar {
+            white-space: collapse;
+        }
+
+        trix-toolbar .dialog {
+            display: none;
+        }
+
+        trix-toolbar .dialog.active {
+            display: block;
+        }
+
+        trix-toolbar .dialog input.validate:invalid {
+            background-color: #ffdddd;
+        }
+
+        trix-toolbar[native] {
+            display: none;
+        }
+
+        trix-toolbar {
+            display: block;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="UniApps - University Exam ERP">
+    <meta name="author" content="WeShineTech">
+    <meta name="keywords" content="uniapps university exam erp">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="//lib.weshinetech.in/lib/itx/priv/static/adminkit/css/lib.2.css">
+    <link rel="stylesheet" type="text/css" href="//lib.weshinetech.in/lib/itx/priv/static/adminkit/css/light.css">
+    <!-- misc-->
+    <link rel="stylesheet" type="text/css"
+        href="//lib.weshinetech.in/lib/itx/priv/static/adminkit/css/fixedColumns.bootstrap5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
+    <!-- keep this disabled-->
+    <script>WebSocket = undefined;</script>
+    <link rel="stylesheet" href="/css/dashboardADS.css">
+    <link rel="stylesheet" type="text/css" href="css/EUKXZaEBcVfm.css">
+    <link rel="stylesheet" type="text/css" href="css/LZJL2Tq6fUH8.css">
+    <link rel="stylesheet" type="text/css" href="css/gG7jrRylSJgd.css">
+    <link rel="stylesheet" type="text/css" href="css/BhF0gudLujYh.css">
+    <link rel="stylesheet" type="text/css" href="css/e9XK9Ln9pvI2.css">
+    <link rel="shortcut icon" href="EYEvxk5P3ktM.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+</head>
+
+
+
+
+<body>
+    <header id="app-bar" class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-elevation--z4" style="position: static;">
+        <nav class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="cas-brand m-3">
+                    <img class="cas-logo" alt="Harvard University logo with shield" title="Harvard University"
+                        src="/images/wce_logo.png"></span>
+                <span class="strong">Walchand College Of Engineering</span>
+            </section>
+            <section class="mdc-top-app-bar__section">
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                <div class="mdc-menu-surface--anchor">
+                    <button id="menuButton" class="mdc-icon-button mdc-top-app-bar__navigation-icon"
+                        aria-haspopup="true" aria-controls="navMenu" value="SIGN IN"> <span
+                            class="mdi mdi-account"></span> <span class="sr-only">menu</span> </button>
+                    <div id="navMenu" class="mdc-menu mdc-menu-surface">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                            <li> <a href="https://key.harvard.edu/manage-account/auto-choose" class="mdc-list-item"
+                                    role="menuitem" tabindex="-1"> <span class="mdc-list-item__ripple"></span> <i
+                                        class="mdi mdi-cog material-icons mdc-list-item__graphic"
+                                        aria-hidden="true"></i>
+                                    <span class="mdc-list-item__text">Account Settings</span> </a> </li>
+                            <li> <a href="/cas/logout" class="mdc-list-item" role="menuitem" tabindex="-1"> <span
+                                        class="mdc-list-item__ripple"></span> <i
+                                        class="mdi mdi-logout material-icons mdc-list-item__graphic"
+                                        aria-hidden="true"></i>
+                                    <span class="mdc-list-item__text">Logout</span> </a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </nav>
+
+    </header>
+
+    <div data-theme="dark" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+
+        <div class="wrapper">
+            <nav id="sidebar" class="sidebar js-sidebar">
+                <div class="sidebar-content js-simDashboardplebar" data-simplebar="init">
+                    <div class="simplebar-wrapper" style="margin: 0px;">
+                        <div class="simplebar-height-auto-observer-wrapper">
+                            <div class="simplebar-height-auto-observer"></div>
+                        </div>
+                        <div class="simplebar-mask">
+                            <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+                                    <div class="simplebar-content" style="padding: 0px;">
+                                        <div>
+                                            <ul class="sidebar-nav wfid_temp729638402 list">
+                                                <li class="sidebar-item wfid_temp729638466 listitem"></li>
+                                                <li class="sidebar-item wfid_temp729638530 listitem"><span
+                                                        class="sidebar-link wfid_temp729638594 link"
+                                                        data-ajax="false" id="myButton1"><i
+                                                            class="align-middle me-2 fas fa-fw fa-home"></i><span
+                                                            class="align-middle wfid_temp729638658"  >Dashboard</span></span>
+                                                </li>
+                                                <li class="sidebar-item wfid_temp729638722 listitem"></li>
+                                                <li class="sidebar-item wfid_temp729638786 listitem"><span
+                                                      
+                                                        class="sidebar-link wfid_temp729638850 link"
+                                                        data-ajax="false"><i
+                                                            class="align-middle me-2 fas fa-fw fa-user"></i><span
+                                                            class="align-middle wfid_temp729638914" id="myButton2">Login</span></span>
+                                                </li>
+                                                <li class="sidebar-item wfid_temp729638978 listitem"><span
+                                                       
+                                                        class="sidebar-link wfid_temp729639042 link"
+                                                        data-ajax="false"><i
+                                                            class="align-middle me-2 fas fa-fw fa-book-open"></i><span
+                                                            class="align-middle wfid_temp729639106" id="myButton3">Program</span></span>
+                                                </li>
+
+                                            </ul>
+                                            <p class="wfid_temp729640514 p" style="padding-bottom: 10em;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="simplebar-placeholder" style="width: auto; height: 648px;"></div>
+                    </div>
+                    <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                        <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                    </div>
+                    <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                        <div class="simplebar-scrollbar"
+                            style="height: 259px; display: block; transform: translate3d(0px, 0px, 0px);"></div>
+                    </div>
+                </div>
+            </nav>
+            <div class="main">
+                <nav class="navbar navbar-expand navbar-light navbar-bg"><a class="sidebar-toggle js-sidebar-toggle"><i
+                            class="hamburger align-self-center"></i></a>
+                    <div></div>
+                    <div></div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav navbar-align">
+                            <li class="nav-item dropdown"><a href="#" data-bs-toggle="dropdown"
+                                    class="nav-icon dropdown-toggle d-inline-block d-sm-none"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-settings align-middle">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg></a><a href="#" data-bs-toggle="dropdown"
+                                    class="nav-link dropdown-toggle d-none d-sm-inline-block"><span
+                                        class="text-dark">Uikey
+                                        Mayur Narendra</span></a>
+                                <div class="dropdown-menu dropdown-menu-end"><a href="/myprofile"
+                                        class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-user align-middle me-1">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg> Profile</a>
+                                    <div class="dropdown-divider"></div><a href="/itxlogout" class="dropdown-item"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-power align-middle me-1">
+                                            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                                            <line x1="12" y1="2" x2="12" y2="12"></line>
+                                        </svg>Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <main class="px-3 py-4">
+                    <div class="container-fluid" id="myDiv">
+                        <div class="card wfid_temp729640578">
+                            <ul class="list-group list-group-flush wfid_temp729640642 list">
+                                <li class="list-group-item wfid_temp729640706 listitem">Dashboard</li>
+                                <li class="list-group-item wfid_temp729640770 listitem">
+                                    <div class="card wfid_temp729640834">
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+                <div id="myModal" tabindex="-1" aria-modal="true" role="dialog" style="z-index: 2000;"
+                    class="modal fade">
+                    <div role="document" class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"></h5>
+                                <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                    class="btn btn-secondary">Close</button>
+                            </div>
+                            <div class="modal-body m-3">
+                                <p class="mb-0"></p>
+                                <div class="modal-body wfid_myModalBody wfid_temp729640962"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="div">
+                    <div class="spinner-border text-danger p-2 m-3 wfid_temp729641026 spinner" style="display:none;position: fixed; bottom: 0; right: 0; 
+			z-index: 10000; font-size: 2rem;"><img class="wfid_temp729641090 image" src=""></div>
+                </div>
+            </div>
+        </div>
+        <script>
+                const button_1 = document.getElementById("myButton1");
+                const button_2 = document.getElementById("myButton2");
+                const button_3= document.getElementById("myButton3");
+                    const div = document.getElementById("myDiv");
+                    button_1.onclick = function () {
+                            const xhr = new XMLHttpRequest();
+
+                            xhr.onreadystatechange = function () {
+                                if (this.readyState === 4 && this.status === 200) {
+                                    div.innerHTML = this.responseText;
+                                }
+                            };
+
+                            xhr.open("GET", "/Main.html");
+                            xhr.send();
+                        };
+                    button_2.onclick = function () {
+                            const xhr = new XMLHttpRequest();
+
+                            xhr.onreadystatechange = function () {
+                                if (this.readyState === 4 && this.status === 200) {
+                                    div.innerHTML = this.responseText;
+                                }
+                            };
+
+                            xhr.open("GET", "/resgistration.html");
+                            xhr.send();
+                        };
+                    button_3.onclick = function () {
+                            const xhr = new XMLHttpRequest();
+
+                            xhr.onreadystatechange = function () {
+                                if (this.readyState === 4 && this.status === 200) {
+                                    div.innerHTML = this.responseText;
+                                }
+                            };
+
+                            xhr.open("GET", "/Main.html");
+                            xhr.send();
+                        };
+        </script>
+        <script type="text/javascript" charset="utf-8"
+            src="//lib.weshinetech.in/lib/itx/priv/static/adminkit/js/lib.2.js"></script>
+        <script type="text/javascript" charset="utf-8"
+            src="//lib.weshinetech.in/lib/itx/priv/static/adminkit/js/app.js"></script>
+        <div class="notyf"></div>
+        <div class="notyf-announcer" aria-atomic="true" aria-live="polite"
+            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; outline: 0px;">
+        </div>
+        <script type="text/javascript" charset="utf-8"
+            src="//lib.weshinetech.in/lib/itx/priv/static/adminkit/js/datatables.min.js"></script>
+        <script type="text/javascript" charset="utf-8"
+            src="//lib.weshinetech.in/lib/itx/priv/static/external/datepicker/bootstrap-datepicker.min.js"></script>
+        <script>Nitrogen.$set_param('pageContext', 'xhrpkpET-uYES65VJ0q-BY6wDP9QIiV0NGsGp6VYJpxQL3JtJM8PglZkkj_LeIAzrGmf1BDYkaTQ58v63BEKtRlcktZeN3PLmY5Fwaflgb256Vh5R0A7BCepj75csUCa3Jw5d95_pg_xlBL_mqMAqVxJdkYAc9qmouLhI35FLVs5rnTUhIe_-NgAaDgAEfsaM8qdUL77lhATWMGAmze4gC3iYbU5znEIHVNQD1OwTCbMUl2JqOMwmIKW17fmwQanvPPC0FYtDzRZOjl3xdhCDoaUlnU');
+        </script>
+        <script>
+            $('.btn-success-outline').addClass('btn-outline-success').removeClass('btn-success-outline');
+            $('.btn-primary-outline').addClass('btn-outline-primary').removeClass('btn-primary-outline');
+            $('.btn-danger-outline').addClass('btn-outline-danger').removeClass('btn-danger-outline');
+            $('.btn-secondary-outline').addClass('btn-outline-secondary').removeClass('btn-secondary-outline');
+            $('.btn-warning-outline').addClass('btn-outline-warning').removeClass('btn-warning-outline');
+            $('.btn-info-outline').addClass('btn-outline-info').removeClass('btn-info-outline');
+            $('.pull-sm-right').addClass('float-sm-end').removeClass('pull-sm-right');
+            $('.font-weight-bold').addClass('fw-bold').removeClass('font-weight-bold');
+        </script>
+
+        <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+            style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
+            <defs id="SvgjsDefs1002"></defs>
+            <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+            <path id="SvgjsPath1004" d="M0 0 "></path>
+        </svg>
+    </div>
+
+
+</body>
+
+</html>
